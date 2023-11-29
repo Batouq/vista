@@ -1,0 +1,86 @@
+.sideNav {
+  display: flex;
+
+  padding: 1rem;
+  width: 320px;
+  flex-direction: column;
+  text-align: right;
+}
+.navLogo {
+  width: 100px;
+  height: 30px;
+  margin: 0px auto;
+}
+.navUser {
+  padding: 2rem 0rem;
+  border-bottom: 1px solid #90959a68;
+}
+.navUserRank {
+  font-size: 12px;
+  color: #90959a;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 12px;
+}
+.navListMenuTitle {
+  color: #5d5d5d;
+  text-align: right;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+}
+
+.navListMenuUnList {
+  color: #90959a;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+.linkActive {
+  color: white !important ;
+  border-radius: 12px;
+  background: linear-gradient(268deg, #f99b22 7.33%, #ffc67c 104.61%);
+}
+.navListMenuItemLink {
+  color: #90959a;
+  display: flex;
+  gap: 1rem;
+  justify-content: right;
+  padding: 18px;
+  align-items: center;
+  cursor: pointer;
+}
+.navListMenuItem {
+  padding: 16px 0px;
+}
+
+.navListMenu {
+  padding: 10px;
+  border-bottom: 1px solid #90959a68;
+}
+
+.navAccountInfo {
+  padding: 10px;
+}
+
+.navAccountInfoTitle {
+  color: #5d5d5d;
+  text-align: right;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+}
+
+.navAccountInfoItem {
+  color: #90959a;
+  display: flex;
+  gap: 1rem;
+  justify-content: right;
+  padding: 18px;
+  align-items: center;
+  cursor: pointer;
+}

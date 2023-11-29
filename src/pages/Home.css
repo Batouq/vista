@@ -1,0 +1,38 @@
+.scheduleSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.scheduleSectionHead {
+  width: 100%;
+  text-align: right;
+  padding: 1.5rem 0rem;
+  box-shadow: 0 10px 6px -6px #777;
+  z-index: 10;
+}
+.scheduleSectionHeadContaner {
+  width: fit-content;
+  padding: 0rem 3rem;
+}
+.scheduleSectionHeadTitle {
+  font-size: 12px;
+  color: #90959a;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 12px;
+}
+
+.scheduleSectionDetail {
+  width: 100%;
+  flex-grow: 1;
+  background: #F6FBFF; 
+}
+
+.scheduleSectionHeadUser {
+  color: #1f2934;
+  padding-top: 3px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}

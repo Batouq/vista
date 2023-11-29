@@ -1,0 +1,20 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  all: unset;
+}
+ul {
+  list-style-type: none;
+}
+
+body {
+  font-family: "Montserrat-Arabic";
+}
+
+@font-face {
+  font-family: "Montserrat-Arabic"; /*Can be any text*/
+  src: local("Montserrat-Arabic"),
+    url("./fonts/Montserrat-Arabic-Regular-400.otf") format("truetype");
+}
