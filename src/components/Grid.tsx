@@ -27,7 +27,7 @@ export default function Grid() {
       orderDate: "قبل ساعة",
       sellerNumber: 150154,
       dropLocation: "الخبر",
-      driverMandob: "محمد علي",
+      driverMandob: "-",
       lastUpdate: " قبل ساعة",
       orderStatus: "review",
       orderPlacement: "asnad",
@@ -38,9 +38,9 @@ export default function Grid() {
       orderDate: "قبل ساعة",
       sellerNumber: 150154,
       dropLocation: "الخبر",
-      driverMandob: "محمد علي",
+      driverMandob: "-",
       lastUpdate: " قبل ساعة",
-      orderStatus: "sending",
+      orderStatus: "review",
       orderPlacement: "asnad",
     },
     {
@@ -49,9 +49,9 @@ export default function Grid() {
       orderDate: "قبل ساعة",
       sellerNumber: 150154,
       dropLocation: "الخبر",
-      driverMandob: "محمد علي",
+      driverMandob: "-",
       lastUpdate: " قبل ساعة",
-      orderStatus: "process",
+      orderStatus: "review",
       orderPlacement: "asnad",
     },
   ]);
@@ -139,10 +139,16 @@ const BtnStatus = (p) => {
     sending: { backgroundColor: "#FEEAC7", color: "#F3790D" },
     process: { backgroundColor: "#F3F7FC", color: "#3780C0" },
   };
+  const statusValuesString = {
+    undefined: " ",
+    review: "تحت المراجعة",
+    sending: "جاري الاستلام",
+    process: "في مركز الفرز",
+  };
 
   return (
     <div className={"btnStatus"} style={statusValues[p.value]}>
-      تحت المراجعة
+      {statusValuesString[p.value]}
     </div>
   );
 };
