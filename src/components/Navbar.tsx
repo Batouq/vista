@@ -7,10 +7,23 @@ import CartGray from "../assets/cart-with-item-gray.svg";
 import Worker from "../assets/worker-icon.svg";
 import ProfileIcon from "../assets/profile-icon.svg";
 import SettingIcon from "../assets/setting-icon.svg";
-import CarDesign from "../assets/carDesign.svg"
+import CarDesign from "../assets/carDesign.svg";
 import Icon from "../assets/Group.svg";
 
+import { useState, useEffect } from "react";
+
+import { useLocation } from "react-router-dom";
+
 const NavBar = () => {
+  const [path, setPath] = useState("/");
+
+  const location = useLocation();
+
+  useEffect(() => {
+    // Update the path state whenever the location changes
+    setPath(location.pathname);
+  }, [location]);
+
   return (
     <nav className="sideNav">
       <div className="sideNavDesign">
@@ -26,19 +39,34 @@ const NavBar = () => {
         <p className="navListMenuTitle">القائمة الرئيسية</p>
         <ul className="navListMenuUnList">
           <li className="navListMenuItem">
-            <Link to="/" className=" navListMenuItemLink  linkActive">
+            <Link
+              to="/"
+              className={`navListMenuItemLink ${
+                path === "/" ? "linkActive" : ""
+              } `}
+            >
               الطلبات الغير مسندة
-              <img src={Cart} alt="" />
+              <img src={CartGray} alt="" />
             </Link>
           </li>
           <li className="navListMenuItem">
-            <Link to="/homeplus" className="navListMenuItemLink">
+            <Link
+              to="/homeplus"
+              className={`navListMenuItemLink ${
+                path === "/homeplus" ? "linkActive" : ""
+              } `}
+            >
               الطلبات المسندة
               <img src={CartGray} alt="" />
             </Link>
           </li>
           <li className="navListMenuItem">
-            <Link to="/mandob" className="navListMenuItemLink">
+            <Link
+              to="/mandob"
+              className={`navListMenuItemLink ${
+                path === "/mandob" ? "linkActive" : ""
+              } `}
+            >
               قائمة المناديب
               <img src={Worker} alt="" />
             </Link>
