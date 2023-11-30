@@ -7,12 +7,15 @@ import CartGray from "../assets/cart-with-item-gray.svg";
 import Worker from "../assets/worker-icon.svg";
 import ProfileIcon from "../assets/profile-icon.svg";
 import SettingIcon from "../assets/setting-icon.svg";
-
+import CarDesign from "../assets/carDesign.svg"
 import Icon from "../assets/Group.svg";
 
 const NavBar = () => {
   return (
     <nav className="sideNav">
+      <div className="sideNavDesign">
+        <img src={CarDesign} />
+      </div>
       <img src={Icon} alt="the website icon" className="navLogo" />
       <div className="navUser">
         <p className="navUserRank">مدير التجميع</p>

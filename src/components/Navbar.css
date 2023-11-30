@@ -5,6 +5,14 @@
   width: 320px;
   flex-direction: column;
   text-align: right;
+  position: relative;
+}
+.sideNavDesign {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  bottom: 0;
+  right: 0;
 }
 .navLogo {
   width: 100px;

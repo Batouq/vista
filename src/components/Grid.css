@@ -1,0 +1,46 @@
+.ag-header-cell-label {
+  font-family: Montserrat-Arabic;
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  font-size: 16px;
+  font-weight: lighter;
+
+  letter-spacing: 0em;
+  text-align: center;
+  color: #5d5d5d;
+}
+
+.ag-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Montserrat-Arabic;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0em;
+  color: #1f2934;
+}
+
+.btnStatus {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto auto;
+  width: 100px;
+  border-radius: 4px;
+  background-color: #e7e7e7;
+}
+.btnPlacment {
+  height: 50px;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin: auto auto;
+  width: 100px;
+  border-radius: 4px;
+  background-color: #f99b22;
+}
