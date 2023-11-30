@@ -3,59 +3,18 @@ import "ag-grid-enterprise";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-quartz.css";
 import "./Grid.css";
-import {
-  ColDef,
-  ColGroupDef,
-  GridApi,
-  GridOptions,
-  GridReadyEvent,
-  IGroupCellRendererParams,
-  createGrid,
-} from "ag-grid-community";
-import { IOlympicData } from "./interfaces";
-import { useCallback, useMemo, useState } from "react";
+import { ColDef, IGroupCellRendererParams } from "ag-grid-community";
+import { OrderData } from "./interfaces";
+import { useMemo, useState } from "react";
 
-export default function Grid() {
+export default function Grid(props: { database: OrderData[] }) {
   const containerStyle = useMemo(() => ({ width: "100%", height: "100%" }), []);
   const gridStyle = useMemo(() => ({ height: "100%", width: "100%" }), []);
   const rowHeight = 80;
   const headerHeight = 80;
-  const [rowData, setRowData] = useState<IOlympicData[]>([
-    {
-      country: "الرياض",
-      orderNumber: 1524,
-      orderDate: "قبل ساعة",
-      sellerNumber: 150154,
-      dropLocation: "الخبر",
-      driverMandob: "-",
-      lastUpdate: " قبل ساعة",
-      orderStatus: "review",
-      orderPlacement: "asnad",
-    },
-    {
-      country: "الخبر",
-      orderNumber: 1524,
-      orderDate: "قبل ساعة",
-      sellerNumber: 150154,
-      dropLocation: "الخبر",
-      driverMandob: "-",
-      lastUpdate: " قبل ساعة",
-      orderStatus: "review",
-      orderPlacement: "asnad",
-    },
-    {
-      country: "ابها",
-      orderNumber: 1524,
-      orderDate: "قبل ساعة",
-      sellerNumber: 150154,
-      dropLocation: "الخبر",
-      driverMandob: "-",
-      lastUpdate: " قبل ساعة",
-      orderStatus: "review",
-      orderPlacement: "asnad",
-    },
-  ]);
-  const [columnDefs, setColumnDefs] = useState<ColDef[]>([
+  const [rowData] = useState<OrderData[]>(props.database);
+  
+  const [columnDefs] = useState<ColDef[]>([
     { field: "country", rowGroup: true, hide: true },
     { field: "orderNumber", headerName: "رقم الطلب", minWidth: 120 },
     { field: "orderDate", headerName: "تاريخ الطلب", minWidth: 120 },
@@ -76,16 +35,7 @@ export default function Grid() {
       cellRenderer: BtnPlacment,
     },
   ]);
-  // const [columnDefs, setColumnDefs] = useState<ColDef[]>([
-  //   { field: "country", rowGroup: true, hide: true },
-  //   { field: "sport", rowGroup: true, hide: true },
-  //   { field: "gold", aggFunc: "sum" },
-  //   { field: "silver", aggFunc: "sum" },
-  //   { field: "bronze", aggFunc: "sum" },
-  //   { field: "age", minWidth: 120 },
-  //   { field: "year", maxWidth: 120 },
-  //   { field: "date", minWidth: 150 },
-  // ]);
+
   const defaultColDef = useMemo<ColDef>(() => {
     return {
       flex: 1,
@@ -104,16 +54,10 @@ export default function Grid() {
     };
   }, []);
 
-  // const onGridReady = useCallback((params: GridReadyEvent) => {
-  //   fetch("https://www.ag-grid.com/example-assets/olympic-winners.json")
-  //     .then((resp) => resp.json())
-  //     .then((data: IOlympicData[]) => setRowData(data));
-  // }, []);
-
   return (
     <div style={containerStyle}>
       <div style={gridStyle} className={"ag-theme-quartz"}>
-        <AgGridReact<IOlympicData>
+        <AgGridReact<OrderData>
           rowData={rowData}
           headerHeight={headerHeight}
           enableRtl={true}
@@ -125,7 +69,6 @@ export default function Grid() {
           groupSelectsChildren={true}
           suppressRowClickSelection={true}
           suppressAggFuncInHeader={true}
-          // onGridReady={onGridReady}
         />
       </div>
     </div>

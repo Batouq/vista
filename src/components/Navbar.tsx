@@ -32,13 +32,13 @@ const NavBar = () => {
             </Link>
           </li>
           <li className="navListMenuItem">
-            <Link to="/test" className="navListMenuItemLink">
+            <Link to="/homeplus" className="navListMenuItemLink">
               الطلبات المسندة
               <img src={CartGray} alt="" />
             </Link>
           </li>
           <li className="navListMenuItem">
-            <Link to="/test" className="navListMenuItemLink">
+            <Link to="/mandob" className="navListMenuItemLink">
               قائمة المناديب
               <img src={Worker} alt="" />
             </Link>

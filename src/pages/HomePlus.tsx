@@ -4,7 +4,7 @@ import { OrderData } from "../components/interfaces";
 
 import Grid from "../components/Grid";
 
-const Home = () => {
+const HomePlus = () => {
   const data: OrderData[] = [
     {
       country: "الرياض",
@@ -12,9 +12,31 @@ const Home = () => {
       orderDate: "قبل ساعة",
       sellerNumber: 150154,
       dropLocation: "الخبر",
-      driverMandob: "-",
+      driverMandob: "ياسر محمد",
       lastUpdate: " قبل ساعة",
-      orderStatus: "review",
+      orderStatus: "process",
+      orderPlacement: "asnad",
+    },
+    {
+      country: "الرياض",
+      orderNumber: 1524,
+      orderDate: "قبل ساعة",
+      sellerNumber: 150154,
+      dropLocation: "الخبر",
+      driverMandob: "ياسر محمد",
+      lastUpdate: " قبل ساعة",
+      orderStatus: "sending",
+      orderPlacement: "asnad",
+    },
+    {
+      country: "الرياض",
+      orderNumber: 1524,
+      orderDate: "قبل ساعة",
+      sellerNumber: 150154,
+      dropLocation: "الخبر",
+      driverMandob: "ياسر محمد",
+      lastUpdate: " قبل ساعة",
+      orderStatus: "sending",
       orderPlacement: "asnad",
     },
     {
@@ -23,9 +45,9 @@ const Home = () => {
       orderDate: "قبل ساعة",
       sellerNumber: 150154,
       dropLocation: "الخبر",
-      driverMandob: "-",
+      driverMandob: "ياسر محمد",
       lastUpdate: " قبل ساعة",
-      orderStatus: "review",
+      orderStatus: "sending",
       orderPlacement: "asnad",
     },
     {
@@ -34,9 +56,9 @@ const Home = () => {
       orderDate: "قبل ساعة",
       sellerNumber: 150154,
       dropLocation: "الخبر",
-      driverMandob: "-",
+      driverMandob: "ياسر محمد",
       lastUpdate: " قبل ساعة",
-      orderStatus: "review",
+      orderStatus: "sending",
       orderPlacement: "asnad",
     },
   ];
@@ -59,7 +81,7 @@ const Home = () => {
             </span>
           </div>
           <span className="scheduleSectionDetailListTitle">
-            قـائمة الطلبات الغير مسندة
+            قـائمة الطلبات مسندة
           </span>
           <div className="scheduleSectionDetailList">
             <Grid database={data} />
@@ -70,4 +92,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePlus;
