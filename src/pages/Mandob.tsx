@@ -33,7 +33,7 @@ const Mandob = () => {
             </span>
           </div>
           <span className="scheduleSectionDetailListTitle">
-            قـائمة الطلبات مسندة
+            قـائمة المناديب
           </span>
           <div className="scheduleSectionDetailList">
             <GridMandob database={data} />
